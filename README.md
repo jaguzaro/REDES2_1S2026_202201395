@@ -76,6 +76,7 @@ Se implementaron dos servidores DHCP conectados a MAN_TOP por interfaces L3 (no 
 |---|---|---|---|
 | VLAN10_NARANJA_IZQ | 192.188.95.1 | 192.188.95.4 | 255.255.255.224 |
 | VLAN20_VERDE_IZQ | 192.188.95.33 | 192.188.95.35 | 255.255.255.224 |
+| VLAN99_ADMIN | 192.188.95.129 | 192.188.95.130 | 255.255.255.224 |
 
 **DHCP2** (IP: 10.4.95.26, gateway: 10.4.95.25):
 
