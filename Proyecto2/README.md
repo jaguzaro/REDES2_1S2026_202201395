@@ -18,7 +18,7 @@
 3. [Plan de Direccionamiento IP](#3-plan-de-direccionamiento-ip)
 4. [ISP 1 — Telecom Uno](#4-isp-1--telecom-uno)
 5. [ISP 2 — Redes Nacionales](#5-isp-2--redes-nacionales)
-6. [ISP 3 — Conexiones Futuras](#6-isp-3--conexiones-futuras)
+6. [ISP 3 — Link Global](#6-isp-3--link-global)
 7. [Interconexión BGP](#7-interconexión-bgp)
 8. [Servicios de Red](#8-servicios-de-red)
 9. [Listas de Control de Acceso (ACLs)](#9-listas-de-control-de-acceso-acls)
@@ -36,7 +36,7 @@ El proyecto consiste en el diseño e implementación de una infraestructura naci
 |---|---|---|---|---|
 | ISP 1 | Telecom Uno | Árbol | OSPF | DNS + HTTP |
 | ISP 2 | Redes Nacionales | Jerárquico | OSPF | DHCP central |
-| ISP 3 | Conexiones Futuras | Hub and Spoke | EIGRP | WiFi |
+| ISP 3 | Link Global | Hub and Spoke | EIGRP | WiFi |
 
 ### Dispositivos utilizados
 
@@ -353,11 +353,11 @@ interface Vlan40
 
 ---
 
-## 6. ISP 3 — Conexiones Futuras
+## 6. ISP 3 — Link Global
 
 ### 6.1 Descripción
 
-Conexiones Futuras implementa topología hub and spoke con EIGRP. El router central (Hub) conecta a todos los spokes. Incluye un router inalámbrico WRT300N para proveer servicio WiFi.
+Link Global implementa topología hub and spoke con EIGRP. El router central (Hub) conecta a todos los spokes. Incluye un router inalámbrico WRT300N para proveer servicio WiFi.
 
 **Red base:** 172.16.32.0/24  
 **Protocolo:** EIGRP AS 1  
