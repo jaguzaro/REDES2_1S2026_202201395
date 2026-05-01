@@ -54,7 +54,7 @@ El proyecto consiste en el diseño e implementación de una infraestructura naci
 
 ### 2.1 Vista General
 
-[IMAGEN: ./imgs/topologia_general.png — Vista completa de los 3 ISPs interconectados por el triángulo BGP en Packet Tracer]
+![](./imgs/topologia_general.png)
 
 ### 2.2 Triángulo BGP
 
@@ -71,15 +71,15 @@ Los tres ISPs se interconectan mediante tres Multilayer Switches 3650-24PS forma
 
 ### 2.3 ISP 1 — Topología Árbol
 
-[IMAGEN: ./imgs/isp1_topologia.png — Topología árbol de ISP1: R1-Core → R1-Dist1/Dist2 → R1-Acc1/Acc2 → SW-Admin/SW-Atencion → PCs]
+![](./imgs/isp1_topologia.png)
 
 ### 2.4 ISP 2 — Modelo Jerárquico
 
-[IMAGEN: ./imgs/isp2_topologia.png — Topología jerárquica de ISP2 con HSRP entre MSW-Dist-A y MSW-Dist-B]
+![](./imgs/isp2_topologia.png)
 
 ### 2.5 ISP 3 — Hub and Spoke
 
-[IMAGEN: ./imgs/isp3_topologia.png — Topología hub and spoke de ISP3 con R3-Hub central y los 3 spokes]
+![](./imgs/isp3_topologia.png)
 
 ---
 
@@ -349,7 +349,7 @@ interface Vlan40
  standby 40 preempt
 ```
 
-[IMAGEN: ./imgs/hsrp_standby_brief.png — Output del comando show standby brief en R2-Acc1 mostrando estado Active/Standby]
+![](./imgs/hsrp_standby_brief.png)
 
 ---
 
@@ -456,7 +456,7 @@ Para que los routers internos de cada ISP conozcan las redes de los otros ISPs, 
 | MSW-ISP2 | BGP → OSPF y OSPF → BGP |
 | MSW-ISP3 | BGP → EIGRP y EIGRP → BGP |
 
-[IMAGEN: ./imgs/bgp_summary.png — Output del comando show ip bgp summary en MSW-ISP1 mostrando vecinos establecidos]
+![](./imgs/bgp_summary.png)
 
 ---
 
@@ -475,7 +475,7 @@ Para que los routers internos de cada ISP conozcan las redes de los otros ISPs, 
 
 El servidor DNS es accesible desde toda la topología gracias a la redistribución de rutas via BGP.
 
-[IMAGEN: ./imgs/servidor_web.png — Captura del navegador mostrando la página web del proyecto accedida desde un PC de ISP3]
+![](./imgs/servidor_web.png)
 
 ### 8.2 Servidor DHCP (ISP2)
 
@@ -630,7 +630,7 @@ interface Vlan30
 | ISP1 → ISP3 | PC0 | PC12 |  Exitoso |
 | ISP2 → ISP3 | PC6 | PC12 |  Exitoso |
 
-[IMAGEN: ./imgs/ping_cross_isp.png — Output de ping exitoso desde PC0 (ISP1) hacia PC12 (ISP3)]
+![](./imgs/ping_cross_isp.png)
 
 ### 10.3 Verificación DHCP
 
@@ -687,6 +687,6 @@ interface Vlan30
 | PC12 Soporte | PC6 Ventas |  Bloqueado (Ventas no acepta) |  |
 | PC0 Administración | PC6 Ventas |  Bloqueado (Ventas no acepta) |  |
 
-[IMAGEN: ./imgs/acl_validacion.png — Output de pings mostrando comunicaciones permitidas y bloqueadas según las ACLs]
+![](./imgs/acl_validacion.png)
 
 ---
